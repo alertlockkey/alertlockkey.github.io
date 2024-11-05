@@ -6,11 +6,14 @@
 -->
 <html>
 	<head>
-		<title>Spectral by HTML5 UP</title>
+		<title>Alert Lock & Key</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 	</head>
 	<body class="landing is-preload">
 
@@ -19,7 +22,7 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<h1><a href="index.html">Spectral</a></h1>
+						<h1><a href="index.html">Alert Lock & Key</a></h1>
 						<nav id="nav">
 							<ul>
 								<li class="special">
@@ -27,10 +30,11 @@
 									<div id="menu">
 										<ul>
 											<li><a href="index.html">Home</a></li>
-											<li><a href="generic.html">Generic</a></li>
-											<li><a href="elements.html">Elements</a></li>
-											<li><a href="#">Sign Up</a></li>
-											<li><a href="#">Log In</a></li>
+											<li><a href="about.html">About</a></li>
+											<li><a href="#three">Services</a></li>
+											<li><a href="contact.html">Contact</a></li>
+											<li><a href="careers.html">Careers</a></li>
+											<!-- <li><a href="#">Log In</a></li> -->
 										</ul>
 									</div>
 								</li>
@@ -41,14 +45,54 @@
 				<!-- Banner -->
 					<section id="banner">
 						<div class="inner">
-							<h2>Spectral</h2>
-							<p>Another fine responsive<br />
-							site template freebie<br />
-							crafted by <a href="http://html5up.net">HTML5 UP</a>.</p>
-							<ul class="actions special">
-								<li><a href="#" class="button primary">Activate</a></li>
-							</ul>
+							<!-- <h2>Alert Lock & Key</h2> -->
+							
+							<!-- USER ADDED HTML -->
+							<script type="x-shader/x-vertex" id="vertexshader">
+
+								attribute float size;
+								attribute vec3 customColor;
+								varying vec3 vColor;
+							  
+								void main() {
+							  
+								  vColor = customColor;
+								  vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+								  gl_PointSize = size * ( 300.0 / -mvPosition.z );
+								  gl_Position = projectionMatrix * mvPosition;
+							  
+								}
+							  
+							</script>
+							<script type="x-shader/x-fragment" id="fragmentshader">
+							  
+							   uniform vec3 color;
+							   uniform sampler2D pointTexture;
+							  
+							   varying vec3 vColor;
+							  
+							   void main() {
+							  
+								 gl_FragColor = vec4( color * vColor, 1.0 );
+								 gl_FragColor = gl_FragColor * texture2D( pointTexture, gl_PointCoord );
+							  
+							   }
+							</script>
+							  
+							<!-- END USER ADDED HTML -->
+
+							<p>#1 DOOR & HARDWARE COMPANY IN SAN ANTONIO, TX<br />
+								LOCALLY FAMILY OWNED AND OPERATED<br />
+								BONDED AND INSURED SINCE 1976<br />
+								AVAILABLE 24/7!<br />
+								(210) 342-6678</p>
+								
 						</div>
+						<ul class="actions special">
+							<li>
+								<a href="contact.html" class="button primary">Contact Us</a>
+							</li>
+						</ul>
 						<a href="#one" class="more scrolly">Learn More</a>
 					</section>
 
@@ -56,15 +100,14 @@
 					<section id="one" class="wrapper style1 special">
 						<div class="inner">
 							<header class="major">
-								<h2>Arcu aliquet vel lobortis ata nisl<br />
-								eget augue amet aliquet nisl cep donec</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend<br />
-								fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.</p>
+								<h2>About Us<br />
+									</h2>
+								<p>Alert Lock & Key offers a full range of San Antonio locksmith services, from lockouts to rekeying doors. We work with families and businesses to ensure that your home or office is completely secure. The professionals on our team can help you protect your home from criminals or can help you get into your home if you’ve locked yourself out. We can help you rekey after buying a new home so you can be confident that only selected people have access. Our mobile locksmith services can get you back in your vehicle quickly. We can also help you upgrade your security technology with smart locks and alarm systems so that you know that you and your valuables are as safe as possible.</p>
 							</header>
 							<ul class="icons major">
-								<li><span class="icon fa-gem major style1"><span class="label">Lorem</span></span></li>
-								<li><span class="icon fa-heart major style2"><span class="label">Ipsum</span></span></li>
-								<li><span class="icon solid fa-code major style3"><span class="label">Dolor</span></span></li>
+								<li><i class="fa fa-lock major style1"><i class="label"></i></i></li>
+								<!-- <li><i class="fa fa-key major style2"><i class="label"></i></i></li> -->
+								<!-- <li><i class="fa fa-unlock major style3"><i class="label"></i></i></li> -->
 							</ul>
 						</div>
 					</section>
@@ -72,24 +115,22 @@
 				<!-- Two -->
 					<section id="two" class="wrapper alt style2">
 						<section class="spotlight">
-							<div class="image"><img src="images/pic01.jpg" alt="" /></div><div class="content">
-								<h2>Magna primis lobortis<br />
-								sed ullamcorper</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
+							<div class="image"><img src="images/locksmith.png" alt="" /></div><div class="content">
+								<h2>Locksmith Services</h2>
+								<p>Alert Lock & Key offers fast, reliable key replacement and key making services for homes and businesses, ensuring secure access and swift resolution for lost keys. We also provide advanced High Security Restricted Keys for enhanced protection against unauthorized duplication and entry.</p>
 							</div>
 						</section>
 						<section class="spotlight">
-							<div class="image"><img src="images/pic02.jpg" alt="" /></div><div class="content">
-								<h2>Tortor dolore feugiat<br />
-								elementum magna</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
+							<div class="image"><img src="images/alk_alarms.jpg" alt="" /></div><div class="content">
+								<h2>Security</h2>
+								<p>Alert Lock & Key provides advanced smart lock and alarm systems in San Antonio, offering remote access control and enhanced security features to protect your home or business. Our solutions include easy key management, remote monitoring, and comprehensive safety measures to ensure peace of mind and efficient protection.</p>
 							</div>
 						</section>
 						<section class="spotlight">
-							<div class="image"><img src="images/pic03.jpg" alt="" /></div><div class="content">
-								<h2>Augue eleifend aliquet<br />
-								sed condimentum</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
+							<div class="image"><img src="images/secured_panic.png" alt="" /></div><div class="content">
+								<h2>Doors & Hardware</h2>
+								<p>
+									Alert Lock & Key offers expert door installation and hardware services, enhancing security, energy efficiency, and curb appeal for homes and businesses. We provide durable door solutions and seamless installation to ensure optimal functionality and protection.</p>
 							</div>
 						</section>
 					</section>
@@ -98,66 +139,117 @@
 					<section id="three" class="wrapper style3 special">
 						<div class="inner">
 							<header class="major">
-								<h2>Accumsan mus tortor nunc aliquet</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend<br />
-								fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.</p>
+								<h2>Services</h2>
+								<p>In addition to general maintenance work, we specialize in the following services.</p>
 							</header>
 							<ul class="features">
-								<li class="icon fa-paper-plane">
-									<h3>Arcu accumsan</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+								<li class="icon solid fa-home">
+									<h3>Residential</h3>
+									<p>Alert Lock & Key offers comprehensive residential locksmith services in San Antonio, including lockouts, rekeying, lock replacement, and key extraction, ensuring homeowners' security and peace of mind.</p>
 								</li>
-								<li class="icon solid fa-laptop">
-									<h3>Ac Augue Eget</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+								<li class="icon solid fa-building">
+									<h3>Commercial</h3>
+									<p>Alert Lock & Key offers customized and durable commercial storefront glass solutions in San Antonio, providing a wide range of modern designs that enhance the aesthetics of businesses while ensuring security and functionality, with a seamless online purchasing process and excellent customer support.</p>
 								</li>
-								<li class="icon solid fa-code">
-									<h3>Mus Scelerisque</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+								<li class="icon solid fa-car">
+									<h3>Automobile</h3>
+									<p>If you're locked out of your car in San Antonio, Alert Lock & Key offers fast, professional 24/7 auto locksmith services that prioritize safety and ensure no damage to your vehicle, whether you have traditional locks or modern fob technology.</p>
 								</li>
-								<li class="icon solid fa-headphones-alt">
-									<h3>Mauris Imperdiet</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+								<li class="icon solid fa-lock">
+									<h3>Locksmith</h3>
+									<p>Alert Lock & Key offers fast and professional key replacement and rekeying services for homes and businesses in San Antonio, providing customized key systems, high-security restricted keys, and secure access control for all levels of users.</p>
 								</li>
-								<li class="icon fa-heart">
-									<h3>Aenean Primis</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+								<li class="icon solid fa-unlock">
+									<h3>Access Control</h3>
+									<p>Alert Lock & Key offers advanced access control systems in San Antonio, providing convenient, secure, and customizable smart locks for homes and businesses that allow remote control, digital key management, easy lock changes, and enhanced security against break-ins.</p>
 								</li>
-								<li class="icon fa-flag">
-									<h3>Tortor Ut</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+								<li class="icon solid fa-bell">
+									<!-- NEED TO REMOVE THIS -->
+									<h3>Alarm Systems</h3> 
+									<p>Alert Lock & Key offers comprehensive San Antonio alarm systems that protect homes from intruders, fires, carbon monoxide, and other dangers, while also providing remote monitoring, potential insurance savings, and peace of mind through central monitoring and smartphone integration.</p>
 								</li>
 							</ul>
 						</div>
 					</section>
 
 				<!-- CTA -->
-					<section id="cta" class="wrapper style4">
-						<div class="inner">
-							<header>
-								<h2>Arcue ut vel commodo</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum endrerit imperdiet amet eleifend fringilla.</p>
-							</header>
-							<ul class="actions stacked">
-								<li><a href="#" class="button fit primary">Activate</a></li>
-								<li><a href="#" class="button fit">Learn More</a></li>
-							</ul>
-						</div>
-					</section>
+				<section id="cta" class="wrapper style4">
+					<div class="inner">
+						<div class="swiper my-slider" slides>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="./images/logo_medeco.png" class="logo1" /></div>
+								<div class="swiper-slide"><img src="./images/logo_x-09.png" class="logo2" /></div>
+								<div class="swiper-slide"><img src="./images/logo_kaba_mas.png" class="logo3" /></div>
+								<div class="swiper-slide"><img src="./images/alarm_lock.png" class="logo4" /></div>
+								<div class="swiper-slide"><img src="./images/allegion.png" class="logo5" /></div>
+								<div class="swiper-slide"><img src="./images/assa_abloy.png" class="logo6" /></div>
+								<div class="swiper-slide"><img src="./images/pdk.png" class="logo7" /></div>
+								<!-- ADD PDK, ALLEGION, ASSA ABLOY -->
+
+							  <!-- <img src="./images/logo_medeco.png" class="swiper-slide" />
+							  <img src="./images/logo_x-09.png" class="swiper-slide" />
+							  <img src="./images/logo_kaba_mas.png" class="swiper-slide" /> -->
+							</div>
+						  
+							<!-- <div class="swiper-button-next"></div>
+							<div class="swiper-button-prev"></div> -->
+						  </div>
+						  
+						  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+						  <script>
+							new Swiper(".swiper.my-slider", {
+								slidesPerView: 2,
+								centeredSlides: true,
+								centeredSlidesBounds: true,
+								loop: true,
+								spaceBetween: 0,
+								autoplay: {
+									delay: 3000, // 5 seconds delay between slides
+									disableOnInteraction: false, // Pause autoplay on interaction
+								},
+								navigation: {
+									nextEl: ".swiper-button-next",
+									prevEl: ".swiper-button-prev",
+								},
+							});
+						  </script>
+					</div>
+				</section>
+				
+				<!-- <section id="cta" class="wrapper style4">
+					<div class="inner">
+						<header>
+							<h2>Arcue ut vel commodo</h2>
+							<p>Aliquam ut ex ut augue consectetur interdum endrerit imperdiet amet eleifend fringilla.</p>
+						</header>
+						<ul class="actions stacked">
+							<li><a href="#" class="button fit primary">Activate</a></li>
+							<li><a href="#" class="button fit">Learn More</a></li>
+						</ul>
+					</div>
+				</section> -->
+
 
 				<!-- Footer -->
 					<footer id="footer">
 						<ul class="icons">
+							<li><a href="#" class="icon brands fa-yelp"><span class="label">Yelp!</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
 							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 						</ul>
 						<ul class="copyright">
-							<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							<li>&copy; 2020-<span id="currentYear"></span></li><li><a href="http://alertlock.net">Alert Lock & Key</a></li><li>LIC. #B11924</li>
 						</ul>
 					</footer>
+
+					<script>
+						const currentYear = new Date().getFullYear();
+						document.getElementById('currentYear').textContent = currentYear;
+					</script>
+
+
 
 			</div>
 
