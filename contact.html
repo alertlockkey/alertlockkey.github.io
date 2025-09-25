@@ -10,9 +10,14 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 	</head>
 	<body class="is-preload">
+
+
 
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
@@ -40,6 +45,46 @@
 						</nav>
 					</header>
 
+					<section id="banner">
+						<div class="inner">
+							<!-- <h2>Alert Lock & Key</h2> -->
+							
+							<!-- USER ADDED HTML -->
+							<script type="x-shader/x-vertex" id="vertexshader">
+
+								attribute float size;
+								attribute vec3 customColor;
+								varying vec3 vColor;
+							  
+								void main() {
+							  
+								  vColor = customColor;
+								  vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+								  gl_PointSize = size * ( 300.0 / -mvPosition.z );
+								  gl_Position = projectionMatrix * mvPosition;
+							  
+								}
+							  
+							</script>
+							<script type="x-shader/x-fragment" id="fragmentshader">
+							  
+							   uniform vec3 color;
+							   uniform sampler2D pointTexture;
+							  
+							   varying vec3 vColor;
+							  
+							   void main() {
+							  
+								 gl_FragColor = vec4( color * vColor, 1.0 );
+								 gl_FragColor = gl_FragColor * texture2D( pointTexture, gl_PointCoord );
+							  
+							   }
+							</script>
+							  
+							<!-- END USER ADDED HTML -->
+						</div>
+					</section>
+
 				<!-- Main -->
 					<article id="main">
 						<header>
@@ -51,7 +96,7 @@
 
 								<section>
 									<h4>Contact Us</h4>
-									<form method="post" action="#">
+									<form method="post" action="./assets/php/send_form.php">
 										<div class="row gtr-uniform">
 											<div class="col-6 col-12-xsmall">
 												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />

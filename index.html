@@ -175,34 +175,56 @@
 				<!-- CTA -->
 				<section id="cta" class="wrapper style4">
 					<div class="inner">
-						<div class="swiper my-slider" slides>
+						<div class="swiper">
 							<div class="swiper-wrapper">
-								<div class="swiper-slide"><img src="./images/logo_medeco.png" class="logo1" /></div>
-								<div class="swiper-slide"><img src="./images/logo_x-09.png" class="logo2" /></div>
-								<div class="swiper-slide"><img src="./images/logo_kaba_mas.png" class="logo3" /></div>
-								<div class="swiper-slide"><img src="./images/alarm_lock.png" class="logo4" /></div>
-								<div class="swiper-slide"><img src="./images/allegion.png" class="logo5" /></div>
-								<div class="swiper-slide"><img src="./images/assa_abloy.png" class="logo6" /></div>
-								<div class="swiper-slide"><img src="./images/pdk.png" class="logo7" /></div>
-								<!-- ADD PDK, ALLEGION, ASSA ABLOY -->
 
+								<div class="swiper-slide">
+									<div class="brands"><img src="./images/logo_medeco.png" class="logo1" /></div>
+								</div>
+	
+								<div class="swiper-slide">
+									<div class="brands"><br><img src="./images/logo_x-09.png" class="logo2" /></div>
+								</div>
+	
+								<div class="swiper-slide">
+									<div class="brands"><br></vr><img src="./images/logo_kaba_mas.png" class="logo3" /></div>
+								</div>
+	
+								<div class="swiper-slide">
+									<div class="brands"><br><img src="./images/alarm_lock.png" class="logo4" /></div><br>
+								</div>
+	
+								<div class="swiper-slide">
+									<div class="brands"><br><img src="./images/allegion.png" class="logo5" /></div>
+								</div>
+	
+								<div class="swiper-slide">
+									<div class="brands"><br><img src="./images/assa_abloy.png" class="logo6" /></div><br>
+								</div>
+	
+								<div class="swiper-slide">
+									<div class="brands"><br><img src="./images/pdk.png" class="logo7" /></div>
+								</div>
 							  <!-- <img src="./images/logo_medeco.png" class="swiper-slide" />
 							  <img src="./images/logo_x-09.png" class="swiper-slide" />
 							  <img src="./images/logo_kaba_mas.png" class="swiper-slide" /> -->
-							</div>
 						  
-							<!-- <div class="swiper-button-next"></div>
-							<div class="swiper-button-prev"></div> -->
+							</div>
+
+							<div class="swiper-button-next"></div>
+							<div class="swiper-button-prev"></div>
 						  </div>
 						  
 						  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 						  <script>
-							new Swiper(".swiper.my-slider", {
-								slidesPerView: 2,
+							new Swiper(".swiper", {
+								slidesPerView: 3,
 								centeredSlides: true,
 								centeredSlidesBounds: true,
 								loop: true,
-								spaceBetween: 0,
+								spaceBetween: -250,
+								direction: "horizontal",
+								loop: true,
 								autoplay: {
 									delay: 3000, // 5 seconds delay between slides
 									disableOnInteraction: false, // Pause autoplay on interaction

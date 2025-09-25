@@ -2558,7 +2558,7 @@ input, select, textarea {
 		width: 100%;
 		/* box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; */
 		/* box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px; */
-		box-shadow: rgba(0, 0, 0, 0.75) -10px 10px 15px;
+		box-shadow: rgba(0, 0, 0, 0.75) 3px 3px 6px 0px;
 	}
 
 		.features li {
@@ -2567,8 +2567,8 @@ input, select, textarea {
 			position: relative;
 			text-align: left;
 			width: 50%;
-			box-shadow: #ffffffb0 -25px 30px 25px -15px inset,
-			#ffffffb0 10px -10px 25px 0px inset;
+			box-shadow: #ffffffb0 3px 3px 6px 0px inset,
+			#ffffffb0 -3px -3px 6px 1px inset;
 			/* box-shadow: #cf2e2eb0 -25px 30px 25px -15px inset,
 			#cf2e2eb0 10px -10px 25px 0px inset; */
 			border: 1px ridge #000000;
@@ -2694,8 +2694,8 @@ input, select, textarea {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
-		box-shadow: #cf2e2edb 3px 10px 16px 0px inset,
-		#cf2e2edb -3px 0px 16px 1px inset;
+		box-shadow: #cf2e2edb 3px 3px 6px 0px inset,
+		#cf2e2edb -3px -3px 6px 1px inset;
 		border: 1px solid #000000;
 		/* box-shadow: #ffffffdb 3px 10px 16px 0px inset,
 		#ffffffdb -3px 0px 16px 1px inset;
@@ -3184,7 +3184,8 @@ input, select, textarea {
 			}
 
 		.wrapper.style4 {
-			background-color: transparent;
+			background-color: rgba(0, 0, 0, .75);
+			text-align: center;
 		}
 
 		.wrapper.style5 {
@@ -3491,7 +3492,7 @@ iframe {
 
 /* THE HOME PAGE SLIDER */
 
-	.swiper.my-slider {
+	#cta .inner  {
 		width: 25%;
 		height: auto;
 	}
@@ -3504,49 +3505,49 @@ iframe {
 		align-items: center;
 	}
 
-	.swiper-slide img.logo1 {
+	.brands img.logo1 {
 		height: auto;
 		width: auto;
 		background-color: #ffffff;
 		border-radius: 10px;
 	}
 
-	.swiper-slide img.logo2 {
+	.brands img.logo2 {
 		height: auto;
 		width: auto;
 		background-color: #ffffff;
 		border-radius: 10px;
 	}
 
-	.swiper-slide img.logo3 {
+	.brands img.logo3 {
 		height: auto;
 		width: auto;
 		background-color: #ffffff;
 		border-radius: 10px;
 	}
 
-	.swiper-slide img.logo4 {
+	.brands img.logo4 {
 		height: auto;
 		width: auto;
 		background-color: #ffffff;
 		border-radius: 10px;
 	}
 
-	.swiper-slide img.logo5 {
-		height: 50%;
-		width: 50%;
+	.brands img.logo5 {
+		height: auto;
+		width: auto;
 		background-color: #ffffff;
 		border-radius: 10px;
 	}
 
-	.swiper-slide img.logo6 {
-		height: 50%;
-		width: 50%;
+	.brands img.logo6 {
+		height: auto;
+		width: auto;
 		background-color: #ffffff;
 		border-radius: 10px;
 	}
 
-	.swiper-slide img.logo7 {
+	.brands img.logo7 {
 		height: auto;
 		width: auto;
 		background-color: #ffffff;
@@ -4267,38 +4268,12 @@ iframe {
 		}
 
 			#footer .icons a {
-				color: #cf2e2e;
-				/* color: #cf2e2e; */
+				color: #ffffff;
 			}
-
-			#footer .icons a {
+			
+			#footer .icons a:hover {
 				color: #cf2e2e;
-				/* color: #cf2e2e; */
 			}
-
-			#footer .icon.brands.fa-yelp{
-				color: #cf2e2e;
-				/* color: #ff1a1a; */
-			}
-
-			#footer .icon.brands.fa-instagram{
-				color: #cf2e2e;
-				/* color: #e1306c; */
-			}
-
-			#footer .icon.brands.fa-twitter{
-				color: #cf2e2e;
-				/* color: #1da1f2; */
-			}
-
-			#footer .icon.brands.fa-facebook-f{
-				color: #cf2e2e;
-				/* color: #1877f2; */
-			}
-
-				#footer .icons a:hover {
-					color: #fff;
-				}
 
 		#footer .copyright {
 			color: #ffffff;

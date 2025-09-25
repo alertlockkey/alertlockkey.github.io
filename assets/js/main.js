@@ -271,6 +271,7 @@
 			if (event.type === "mousemove") {
 				this.mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
 				this.mouse.y = - (event.clientY / window.innerHeight) * 2 + 1;
+				// console.log("what d'ya expect?")
 			} else if (event.type === "touchmove" && event.touches.length === 1) {
 				this.mouse.x = (event.touches[0].clientX / window.innerWidth) * 2 - 1;
 				this.mouse.y = - (event.touches[0].clientY / window.innerHeight) * 2 + 1;
