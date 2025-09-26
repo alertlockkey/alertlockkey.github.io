@@ -2516,7 +2516,7 @@ input, select, textarea {
 		button.primary,
 		.button.primary {
 			position: relative;
-			background-color: #ed4933;
+			background-color: #eb341c;
 			box-shadow: none !important;
 			color: #ffffff !important;
 		}
@@ -2526,7 +2526,7 @@ input, select, textarea {
 			input[type="button"].primary:hover,
 			button.primary:hover,
 			.button.primary:hover {
-				background-color: #ef5e4a !important;
+				background-color: #eb341c !important;
 			}
 
 			input[type="submit"].primary:active,
@@ -3925,7 +3925,7 @@ iframe {
 				opacity: 0;
 			}
 
-/* Banner */
+/*  */
 
 	#banner {
 		display: -moz-flex;
@@ -3954,10 +3954,16 @@ iframe {
 		align-items: center;
 	}
 
+	#banner p span {
+	display: block;
+	margin-bottom: 0.4em;
+	}
+
 	#banner .image img {
 		border-radius: 3px;
 		display: inline-block;
 		position: static;
+		padding-right: 15%;
 		filter: drop-shadow(0 0 15px #ffffff);
 		animation: neonPulse 4.20s ease-in-out infinite;		
 	}
@@ -3998,17 +4004,25 @@ iframe {
 		#banner .image img {
 			max-width: 45%;
 		}
+		
+		#banner p span {
+		display: block;
+		margin-bottom: 0.4em;
+		}
+
 		#banner p {
+			/* letter-spacing: 0.225em;
+			text-transform: uppercase;
+			z-index: 2;
+			position: relative;
+			bottom: -150px; */
 			letter-spacing: 0.225em;
 			text-transform: uppercase;
-			/* z-index: 2; Ensure the text is visible above the canvas */
-			position: relative;
-			bottom: -150px;
 		}
 		ul.actions.special {
 			/* z-index: 2; Ensure the text is visible above the canvas */
 			position: relative;
-			bottom: -150px;
+			/* bottom: -150px; */
 		}
 
 	}
@@ -4310,6 +4324,154 @@ iframe {
 	body.is-mobile #main > header {
 		background-attachment: scroll;
 	}
+
+/* USER ADDED FOR CONTACT */
+
+	#contact > header {
+		padding: 0 0 0 0 ;
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,1)), url("../../images/sa_skyline1.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,1)), url("../../images/sa_skyline1.jpg");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,1)), url("../../images/sa_skyline1.jpg");
+		background-image: linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,1)), url("../../images/sa_skyline1.jpg");
+		background-attachment: fixed;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		text-align: center;
+	}
+
+		#contact > header h2 {
+			font-size: 1.75em;
+			margin: 0 0 0.5em 0;
+		}
+
+		#contact > header p {
+			color: inherit;
+			letter-spacing: 0.225em;
+			text-transform: uppercase;
+			top: 0;
+		}
+
+			#contact > header p a {
+				color: inherit;
+			}
+
+		@media screen and (max-width: 1680px) {
+
+			#contact > header {
+				padding: 10em 0 8em 0 ;
+			}
+
+		}
+
+		@media screen and (max-width: 1280px) {
+
+			#contact > header {
+				padding: 8em 3em 6em 3em ;
+			}
+
+		}
+
+		@media screen and (max-width: 980px) {
+
+			#contact > header {
+				padding: 10em 3em 8em 3em ;
+			}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			#contact > header {
+				padding: 5em 3em 3em 3em ;
+			}
+
+				#contact > header h2 {
+					font-size: 1.25em;
+					margin: 0 0 1em 0;
+				}
+
+		}
+
+	body.is-mobile #contact > header {
+		background-attachment: scroll;
+	}
+
+/* END USER ADDED FOR CONTACT */
+
+/* USER ADDED FOR CAREERS */
+
+	#careers > header {
+		padding: 0 0 0 0 ;
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,1)), url("../../images/sa_skyline1.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,1)), url("../../images/sa_skyline1.jpg");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,1)), url("../../images/sa_skyline1.jpg");
+		background-image: linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,1)), url("../../images/sa_skyline1.jpg");
+		background-attachment: fixed;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		text-align: center;
+	}
+
+		#careers > header h2 {
+			font-size: 1.75em;
+			margin: 0 0 0.5em 0;
+		}
+
+		#careers > header p {
+			color: inherit;
+			letter-spacing: 0.225em;
+			text-transform: uppercase;
+			top: 0;
+		}
+
+			#careers > header p a {
+				color: inherit;
+			}
+
+		@media screen and (max-width: 1680px) {
+
+			#careers > header {
+				padding: 10em 0 8em 0 ;
+			}
+
+		}
+
+		@media screen and (max-width: 1280px) {
+
+			#careers > header {
+				padding: 8em 3em 6em 3em ;
+			}
+
+		}
+
+		@media screen and (max-width: 980px) {
+
+			#careers > header {
+				padding: 10em 3em 8em 3em ;
+			}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			#careers > header {
+				padding: 5em 3em 3em 3em ;
+			}
+
+				#careers > header h2 {
+					font-size: 1.25em;
+					margin: 0 0 1em 0;
+				}
+
+		}
+
+	body.is-mobile #careers > header {
+		background-attachment: scroll;
+	}
+
+/* END USER ADDED FOR CAREERS */
 
 /* Footer */
 

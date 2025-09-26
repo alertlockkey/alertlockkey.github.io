@@ -45,17 +45,17 @@
 				<!-- Banner -->
 					<section id="banner">
 						<div class="inner">
-							<br><div class="image"><img src="images\alk_logo_2016.png" height="75%" width= "75%"  alt="" /></div>
+							<br><div class="image"><img src="images\alk_logo_2016.png" height="66%" width= "66%"  alt="" /></div>
 							<br><h2>Alert Lock & Key</h2>
 							
-							<p>#1 DOOR & HARDWARE COMPANY IN SAN ANTONIO, TX<br />
-								LOCALLY FAMILY OWNED AND OPERATED<br />
-								BONDED AND INSURED SINCE 1976<br />
-								AVAILABLE 24/7!<br />
-								(210) 342-6678</p>
+							<p><span>#1 DOOR & HARDWARE COMPANY IN SAN ANTONIO, TX</span>
+								<span>LOCALLY FAMILY OWNED AND OPERATED</span>
+								<span>BONDED AND INSURED SINCE 1976</span>
+								<span>AVAILABLE 24/7!</span>
+								<span>(210) 342-6678</span></p>
 								
 						</div>
-						<ul class="actions special">
+						<br><ul class="actions special">
 							<li>
 								<a href="contact.html" class="button primary">Contact Us</a>
 							</li>
@@ -93,14 +93,18 @@
 									<a class="toggle-btn" id="toggle-btn">Show More</a>
 									<script>
 										document.addEventListener("DOMContentLoaded", function () {
-											const btn = document.getElementById("toggle-btn");
+											const link = document.getElementById("toggle-btn");
 											const content = document.getElementById("more-content");
+											const section = document.getElementById("one"); // section to scroll back to
 
-											btn.addEventListener("click", () => {
-											content.classList.toggle("show");
-											btn.textContent = content.classList.contains("show")
-												? "Show Less"
-												: "Show More";
+											link.addEventListener("click", () => {
+											const isExpanded = content.classList.toggle("show");
+											link.textContent = isExpanded ? "Show Less" : "Show More";
+
+											// If we're collapsing (going back to Read More), scroll back up smoothly
+											if (!isExpanded) {
+												section.scrollIntoView({ behavior: "smooth", block: "start" });
+											}
 											});
 										});
 									</script>
