@@ -1826,20 +1826,25 @@ input, select, textarea {
 	}
 
 	.toggle-btn {
-	color: #ffffff;
+	color: #000000;
 	border: none;
 	padding: 0.6em 1.2em;
 	margin-top: 1em;
 	font-size: 1rem;
 	border-radius: 6px;
 	cursor: pointer;
-	transition: background 0.3s ease;
+	transition: color 0.3s ease, background 0.3s ease;
 	}
 
-	.toggle-btn:hover {
-	color: #000000;
+	.toggle-btn:hover,
+	.toggle-btn:focus {
+	color: #ffffff;
 	}
 
+	.toggle-btn:not(:hover):not(:focus) {
+ 	 color: #000000;
+	}
+	
 /* Form */
 
 	form {
