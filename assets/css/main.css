@@ -3506,9 +3506,6 @@ iframe {
 	.brands img.logo1 {
 		background-color: #ffffff;
 		border-radius: 10px;
-		display: flex;
-		justify-self: center;
-		align-self: center;
 	}
 
 	.brands img.logo2 {
