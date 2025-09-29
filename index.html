@@ -95,19 +95,13 @@
 										document.addEventListener("DOMContentLoaded", function () {
 										const link = document.getElementById("toggle-btn");
 										const content = document.getElementById("more-content");
-										const section = document.getElementById("one"); // section to scroll back to
-
+										const section = document.getElementById("one"); 
 										link.addEventListener("click", () => {
 											const isExpanded = content.classList.toggle("show");
 											link.textContent = isExpanded ? "Show Less" : "Show More";
-
-											// ✅ Force color reset to black after toggle
-											link.style.color = "#000000";
-
-											// ✅ Optional: remove focus so mobile browsers don't keep the focus color
+											link.classList.add("reset-color");
+											requestAnimationFrame(() => link.classList.remove("reset-color"));
 											link.blur();
-
-											// If we're collapsing, scroll back up smoothly
 											if (!isExpanded) {
 											section.scrollIntoView({ behavior: "smooth", block: "start" });
 											}

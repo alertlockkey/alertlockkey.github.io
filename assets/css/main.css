@@ -1844,7 +1844,11 @@ input, select, textarea {
 	.toggle-btn:not(:hover):not(:focus) {
  	 color: #000000;
 	}
-	
+
+	.toggle-btn.reset-color {
+ 	 color: #000000 !important;
+	}
+
 /* Form */
 
 	form {
