@@ -2666,6 +2666,7 @@ input, select, textarea {
 				.features li {
 					padding: 3em 2em 1em 2em ;
 					text-align: center;
+					padding: 10%;
 				}
 
 					.features li:before {
@@ -2684,6 +2685,7 @@ input, select, textarea {
 					background-color: #000000;
 					border-top: solid 2px #fff;
 					width: 100%;
+					padding: 10%;
 				}
 
 					.features li:first-child {
@@ -2806,7 +2808,7 @@ input, select, textarea {
 				}
 
 				.spotlight .content {
-					padding: 4em 3em 2em 3em ;
+					padding: 4em 3em 3em 3em ;
 					max-width: none;
 					text-align: center;
 					width: 100%;
@@ -2817,7 +2819,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			.spotlight .content {
-				padding: 3em 2em 1em 2em ;
+				padding: 3em 2em 3em 2em ;
 			}
 
 		}
@@ -2890,6 +2892,8 @@ input, select, textarea {
 
 			.wrapper.style1 header.major p {
 				color: #ffffff;
+				display: block;
+				margin-bottom: 1em;
 			}
 
 			.wrapper.style1 label {
@@ -3051,6 +3055,9 @@ input, select, textarea {
 			}
 
 			.wrapper.style3 header p {
+				color: #b9bad4;
+			}
+			.wrapper.style3 p {
 				color: #b9bad4;
 			}
 
@@ -3483,11 +3490,6 @@ iframe {
 
 /* THE HOME PAGE SLIDER */
 
-	#cta .inner  {
-		width: 25%;
-		height: auto;
-	}
-
 	/* .my-slider img {
 		width: auto;
 		height: auto;
@@ -3496,39 +3498,36 @@ iframe {
 		align-items: center;
 	} */
 
-	.brands {
-		margin-left: 10%;
-		margin-right: 10%;
-	}
+	/* .brands {
+		margin-left: auto;
+		margin-right: auto;
+	} */
 
 	.brands img.logo1 {
-
 		background-color: #ffffff;
 		border-radius: 10px;
-		margin-left: 10%;
-		margin-right: 10%;
+		display: flex;
+		justify-self: center;
+		align-self: center;
 	}
 
 	.brands img.logo2 {
-
 		background-color: #ffffff;
 		border-radius: 10px;
 	}
 
 	.brands img.logo3 {
-
-		background-color: #ffffff;
 		border-radius: 10px;
+		background-color: #ffffff;
 	}
 
 	.brands img.logo4 {
-
 		background-color: #ffffff;
 		border-radius: 10px;
 	}
-
+	
 	.brands img.logo5 {
-
+		
 		background-color: #ffffff;
 		border-radius: 10px;
 	}
@@ -3544,6 +3543,156 @@ iframe {
 		background-color: #ffffff;
 		border-radius: 10px;
 	}
+
+		@media screen and (max-width: 1280px) {
+			.brands img.logo1 {
+				background-color: #ffffff;
+				border-radius: 10px;
+				margin-top:15%;
+				height: 75%;
+				width: 75%;
+			}
+
+			.brands img.logo2 {
+
+				background-color: #ffffff;
+				border-radius: 10px;
+				margin-top:20%;
+			}
+
+			.brands img.logo3 {
+
+				background-color: #ffffff;
+				border-radius: 10px;
+			}
+
+			.brands img.logo4 {
+
+				background-color: #ffffff;
+				border-radius: 10px;
+				margin-top:5%;
+			}
+
+			.brands img.logo5 {
+
+				background-color: #ffffff;
+				border-radius: 10px;
+			}
+
+			.brands img.logo6 {
+
+				background-color: #ffffff;
+				border-radius: 10px;
+				margin-top:15%;
+			}
+
+			.brands img.logo7 {
+
+				background-color: #ffffff;
+				border-radius: 10px;
+				margin-top:10%;
+			}	
+		}
+
+		@media screen and (max-width: 980px) {
+			.brands img.logo1 {
+				background-color: #ffffff;
+				border-radius: 10px;
+				margin-top:15%;
+				height: 75%;
+				width: 75%;
+			}
+
+			.brands img.logo2 {
+
+				background-color: #ffffff;
+				border-radius: 10px;
+				margin-top:20%;
+			}
+
+			.brands img.logo3 {
+
+				background-color: #ffffff;
+				border-radius: 10px;
+			}
+
+			.brands img.logo4 {
+
+				background-color: #ffffff;
+				border-radius: 10px;
+				margin-top:5%;
+			}
+
+			.brands img.logo5 {
+
+				background-color: #ffffff;
+				border-radius: 10px;
+			}
+
+			.brands img.logo6 {
+
+				background-color: #ffffff;
+				border-radius: 10px;
+				margin-top:15%;
+			}
+
+			.brands img.logo7 {
+
+				background-color: #ffffff;
+				border-radius: 10px;
+				margin-top:10%;
+			}	
+		}
+
+		@media screen and (max-width: 736px) {
+			.brands img.logo1 {
+				background-color: #ffffff;
+				border-radius: 10px;
+				margin-top:15%;
+				height: 75%;
+				width: 75%;
+			}
+
+			.brands img.logo2 {
+
+				background-color: #ffffff;
+				border-radius: 10px;
+				margin-top:20%;
+			}
+
+			.brands img.logo3 {
+
+				background-color: #ffffff;
+				border-radius: 10px;
+			}
+
+			.brands img.logo4 {
+
+				background-color: #ffffff;
+				border-radius: 10px;
+				margin-top:5%;
+			}
+
+			.brands img.logo5 {
+
+				background-color: #ffffff;
+				border-radius: 10px;
+			}
+
+			.brands img.logo6 {
+
+				background-color: #ffffff;
+				border-radius: 10px;
+				margin-top:15%;
+			}
+
+			.brands img.logo7 {
+
+				background-color: #ffffff;
+				border-radius: 10px;
+				margin-top:10%;
+			}
+		}
 
 /* THE ABOUT SLIDER */
 
@@ -3610,14 +3759,19 @@ iframe {
 
 	/* General Swiper container styling */
 	.swiper {
-		width: 66%;
+		display: grid;
+		width: auto;
 		max-width:auto;
 		height: 250px;
+		align-items: center;
 	}
 
 	/* Styling for the swiper slides */
 	.swiper-slide {
+		display: grid;
 		text-align: center;
+		align-items: center;
+		/* padding: 50px; */
 	}
 
 	/* Styling for the testimonial content */
@@ -3956,16 +4110,14 @@ iframe {
 
 	#banner p span {
 	display: block;
-	margin-bottom: 0.4em;
 	}
 
 	#banner .image img {
 		border-radius: 3px;
 		display: inline-block;
 		position: static;
-		padding-right: 15%;
 		filter: drop-shadow(0 0 15px #ffffff);
-		animation: neonPulse 4.20s ease-in-out infinite;		
+		animation: neonPulse 3.0s ease-in-out infinite;		
 	}
 
 	@keyframes neonPulse {
@@ -4007,7 +4159,6 @@ iframe {
 		
 		#banner p span {
 		display: block;
-		margin-bottom: 0.4em;
 		}
 
 		#banner p {
@@ -4020,7 +4171,7 @@ iframe {
 			text-transform: uppercase;
 		}
 		ul.actions.special {
-			/* z-index: 2; Ensure the text is visible above the canvas */
+			/* z-index: 2; */
 			position: relative;
 			/* bottom: -150px; */
 		}
@@ -4199,8 +4350,9 @@ iframe {
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
-		display: initial;
-		max-width: 100%;
+		display: flex;
+		align-items: center;
+		max-width: auto;
 	}
 
 		#cta .inner header {
@@ -4227,8 +4379,9 @@ iframe {
 		@media screen and (max-width: 980px) {
 
 			#cta .inner {
-				display: block;
+				display: flex;
 				text-align: center;
+				align-items: center;
 			}
 
 				#cta .inner header {
@@ -4247,8 +4400,14 @@ iframe {
 
 		@media screen and (max-width: 736px) {
 
+			#cta .inner {
+				display: flex;
+				text-align: center;
+				align-items: center;
+			}
+
 			#cta .inner .actions {
-				max-width: none;
+				max-width: auto;
 			}
 
 		}
