@@ -2526,8 +2526,9 @@ input, select, textarea {
 		.button.primary {
 			position: relative;
 			background-color: #eb341c;
-			box-shadow: none !important;
 			color: #ffffff !important;
+			padding: 0 2.75em;
+			/* box-shadow: none !important; */
 		}
 
 			input[type="submit"].primary:hover,
@@ -2535,7 +2536,7 @@ input, select, textarea {
 			input[type="button"].primary:hover,
 			button.primary:hover,
 			.button.primary:hover {
-				background-color: #eb341c !important;
+				background-color: #000000 !important;
 			}
 
 			input[type="submit"].primary:active,
@@ -2543,7 +2544,7 @@ input, select, textarea {
 			input[type="button"].primary:active,
 			button.primary:active,
 			.button.primary:active {
-				background-color: #eb341c !important;
+				background-color: #000000 !important;
 			}
 
 		input[type="submit"].disabled, input[type="submit"]:disabled,
@@ -3206,10 +3207,10 @@ input, select, textarea {
 		}
 
 		.wrapper.style5 {
-			background-color: #cf2e2e;
+			background-color: #000000;
 			color: #ffffff;
-			box-shadow: rgb(0, 0, 0) 3px 3px 6px 0px inset,
-			rgba(0, 0, 0, 0.5) -3px -3px 6px 1px inset;
+			box-shadow: #eb341c 3px 3px 6px 0px inset,
+			#eb341c -3px -3px 6px 1px inset;
 		}
 
 			.wrapper.style5 strong, .wrapper.style5 b {
@@ -3264,7 +3265,7 @@ input, select, textarea {
 			}
 
 				.wrapper.style5 select option {
-					color: #000000;
+					color: #cf2e2e;
 					width: 100%;
 					display: block;
 				}
@@ -3344,7 +3345,7 @@ input, select, textarea {
 			.wrapper.style5 input[type="button"],
 			.wrapper.style5 button,
 			.wrapper.style5 .button {
-				background-color:#000000;
+				background-color:#cf2e2e;
 
 			}
 
