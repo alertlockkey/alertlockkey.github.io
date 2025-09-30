@@ -1821,7 +1821,7 @@ input, select, textarea {
 	}
 
 	.more-content.show {
-	max-height: 2000px; /* big enough to show all content */
+	max-height: 2000px;
 	opacity: 1;
 	}
 
