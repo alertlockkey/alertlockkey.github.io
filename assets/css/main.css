@@ -2525,7 +2525,7 @@ input, select, textarea {
 		button.primary,
 		.button.primary {
 			position: relative;
-			background-color: #eb341c;
+			background-color: #cf2e2e;
 			color: #ffffff !important;
 			padding: 0 2.75em;
 			/* box-shadow: none !important; */
@@ -3209,8 +3209,8 @@ input, select, textarea {
 		.wrapper.style5 {
 			background-color: #000000;
 			color: #ffffff;
-			box-shadow: #eb341c 3px 3px 6px 0px inset,
-			#eb341c -3px -3px 6px 1px inset;
+			box-shadow: #cf2e2e 3px 3px 6px 0px inset,
+			#cf2e2e -3px -3px 6px 1px inset;
 		}
 
 			.wrapper.style5 strong, .wrapper.style5 b {
@@ -4005,10 +4005,18 @@ iframe {
 				line-height: inherit;
 			}
 
+			#header h1 a:hover {
+				color: #cf2e2e;
+			}
+
 				@media screen and (max-width: 736px) {
 
 					#header h1 a {
 						font-size: 0.8em;
+					}
+
+					#header h1 a:hover {
+						color: #cf2e2e;
 					}
 
 				}
@@ -4046,6 +4054,11 @@ iframe {
 						#header nav > ul > li > a.menuToggle {
 							outline: 0;
 							position: relative;
+						}
+
+						#header nav > ul > li > a.menuToggle:hover {
+							color: #cf2e2e;
+							font-size: 0.8em;
 						}
 
 							#header nav > ul > li > a.menuToggle:after {
