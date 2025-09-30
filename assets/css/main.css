@@ -4367,7 +4367,7 @@ iframe {
 	}
 
 	body.is-preload #banner:after {
-		opacity: 1;
+		opacity: 0;
 	}
 
 /* CTA */

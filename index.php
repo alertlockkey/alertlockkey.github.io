@@ -1,69 +1,25 @@
-<!DOCTYPE HTML>
-<!--
-	Spectral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Alert Lock & Key</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-	</head>
-	<body class="landing is-preload">
+<?php get_header(); ?>
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+<!-- Banner -->
+<section id="banner">
+  <div class="inner">
+    <div class="image"><img src="<?php echo get_template_directory_uri(); ?>/images/alk_logo_2016.png" alt="" /></div>
+    <h2><?php bloginfo('name'); ?></h2>
+    <p>
+      <span>#1 DOOR & HARDWARE COMPANY IN SAN ANTONIO, TX</span>
+      <span>LOCALLY FAMILY OWNED AND OPERATED</span>
+      <span>BONDED AND INSURED SINCE 1976</span>
+      <span>AVAILABLE 24/7!</span>
+      <span>(210) 342-6678</span>
+    </p>
+  </div>
+  <ul class="actions special">
+    <li><a href="#contact" class="button primary">Contact Us</a></li>
+  </ul>
+  <a href="#one" class="more scrolly">Learn More</a>
+</section>
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1><a href="#">Alert Lock & Key</a></h1>
-						<nav id="nav">
-							<ul>
-								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
-									<div id="menu">
-										<ul>
-											<li><a href="index.html">Home</a></li>
-											<li><a href="#three">Services</a></li>
-											<li><a href="#contact">Contact</a></li>
-											<li><a href="careers.html">Careers</a></li>
-											<li><a href="#one">About</a></li>
-											<!-- <li><a href="#">Log In</a></li> -->
-										</ul>
-									</div>
-								</li>
-							</ul>
-						</nav>
-					</header>
-
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<br><div class="image"><img src="images\alk_logo_2016.png" height="66%" width= "66%"  alt="" /></div>
-							<br><h2>Alert Lock & Key</h2>
-							
-							<p><span>#1 DOOR & HARDWARE COMPANY IN SAN ANTONIO, TX</span>
-								<span>LOCALLY FAMILY OWNED AND OPERATED</span>
-								<span>BONDED AND INSURED SINCE 1976</span>
-								<span>AVAILABLE 24/7!</span>
-								<span>(210) 342-6678</span></p>
-								
-						</div>
-						<br><ul class="actions special">
-							<li>
-								<a href="#contact" class="button primary">Contact Us</a>
-							</li>
-						</ul>
-						<br><br><br><a href="#one" class="more scrolly">Learn More</a>
-					</section>
-
-				<!-- One -->
+<!-- About -->
 					<section id="one" class="wrapper style1 special">
 						<div class="inner">
 							<header class="major">
@@ -116,30 +72,30 @@
 						</div>
 					</section>
 
-				<!-- Two -->
+
+<!-- Services -->
 					<section id="two" class="wrapper alt style2">
 						<section class="spotlight">
-							<div class="image"><img src="images/locksmith.png" alt="" /></div><div class="content">
+							<div class="image"><img src="<?php echo get_template_directory_uri(); ?>/images/locksmith.png" alt="" /></div><div class="content">
 								<h2>Locksmith Services</h2>
 								<p>Alert Lock & Key offers fast, reliable key replacement and key making services for homes and businesses, ensuring secure access and swift resolution for lost keys. We also provide advanced High Security Restricted Keys for enhanced protection against unauthorized duplication and entry.</p>
 							</div>
 						</section>
 						<section class="spotlight">
-							<div class="image"><img src="images/alk_alarms.jpg" alt="" /></div><div class="content">
+							<div class="image"><img src="<?php echo get_template_directory_uri(); ?>/images/alk_alarms.jpg" alt="" /></div><div class="content">
 								<h2>Security</h2>
 								<p>Alert Lock & Key provides advanced smart lock and alarm systems in San Antonio, offering remote access control and enhanced security features to protect your home or business. Our solutions include easy key management, remote monitoring, and comprehensive safety measures to ensure peace of mind and efficient protection.</p>
 							</div>
 						</section>
 						<section class="spotlight">
-							<div class="image"><img src="images/secured_panic.png" alt="" /></div><div class="content">
+							<div class="image"><img src="<?php echo get_template_directory_uri(); ?>/images/secured_panic.png" alt="" /></div><div class="content">
 								<h2>Doors & Hardware</h2>
 								<p>
 									Alert Lock & Key offers expert door installation and hardware services, enhancing security, energy efficiency, and curb appeal for homes and businesses. We provide durable door solutions and seamless installation to ensure optimal functionality and protection.</p>
 							</div>
 						</section>
 					</section>
-
-				<!-- Three -->
+<!-- Features -->
 					<section id="three" class="wrapper style3 special">
 						<div class="inner">
 							<header class="major">
@@ -176,7 +132,7 @@
 						</div>
 					</section>
 
-				<!-- Contact -->
+<!-- Contact -->
 				<article id="contact">
 					<!-- <header>
 					<p>Use the form below to send us a message</p><br>
@@ -247,38 +203,38 @@
 					</section>
 				</article>
 
-				<!-- CTA -->
+<!-- CTA -->
 				<section id="cta" class="wrapper style4">
 					<div class="inner">
 						<div class="swiper">
 							<div class="swiper-wrapper">
 
 								<div class="swiper-slide">
-									<div class="brands"><img src="./images/logo_medeco.png" class="logo1" /></div>
+									<div class="brands"><img src="<?php echo get_template_directory_uri(); ?>/images/logo_medeco.png" class="logo1" /></div>
 								</div>
 	
 								<div class="swiper-slide">
-									<div class="brands"><br><img src="./images/logo_x-09.png" class="logo2" /></div>
+									<div class="brands"><br><img src="<?php echo get_template_directory_uri(); ?>/images/logo_x-09.png" class="logo2" /></div>
 								</div>
 	
 								<div class="swiper-slide">
-									<div class="brands"><br></vr><img src="./images/logo_kaba_mas.png" class="logo3" /></div>
+									<div class="brands"><br></vr><img src="<?php echo get_template_directory_uri(); ?>/images/logo_kaba_mas.png" class="logo3" /></div>
 								</div>
 	
 								<div class="swiper-slide">
-									<div class="brands"><br><img src="./images/alarm_lock.png" class="logo4" /></div><br>
+									<div class="brands"><br><img src="<?php echo get_template_directory_uri(); ?>/images/alarm_lock.png" class="logo4" /></div><br>
 								</div>
 	
 								<div class="swiper-slide">
-									<div class="brands"><br><img src="./images/allegion.png" class="logo5" /></div>
+									<div class="brands"><br><img src="<?php echo get_template_directory_uri(); ?>/images/allegion.png" class="logo5" /></div>
 								</div>
 	
 								<div class="swiper-slide">
-									<div class="brands"><br><img src="./images/assa_abloy.png" class="logo6" /></div><br>
+									<div class="brands"><br><img src="<?php echo get_template_directory_uri(); ?>/images/assa_abloy.png" class="logo6" /></div><br>
 								</div>
 	
 								<div class="swiper-slide">
-									<div class="brands"><br><img src="./images/pdk.png" class="logo7" /></div>
+									<div class="brands"><br><img src="<?php echo get_template_directory_uri(); ?>/images/pdk.png" class="logo7" /></div>
 								</div>
 				  
 							</div>
@@ -309,37 +265,4 @@
 					</div>
 				</section>
 
-				<!-- Footer -->
-				<footer id="footer">
-					<ul class="icons">
-						<li><a href="#" class="icon brands fa-yelp"><span class="label">Yelp!</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; 2020-<span id="currentYear"></span></li><li><a href="http://alertlock.net">Alert Lock & Key</a></li><li>LIC. #B11924</li>
-					</ul>
-				</footer>
-
-				<script>
-					const currentYear = new Date().getFullYear();
-					document.getElementById('currentYear').textContent = currentYear;
-				</script>
-
-
-
-			</div>
-
-			<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>
+<?php get_footer(); ?>
