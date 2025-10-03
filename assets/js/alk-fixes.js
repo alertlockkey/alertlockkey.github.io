@@ -110,4 +110,21 @@
     }
 
   });
+  
+  // Smooth-scroll fix for full URL anchors
+  $(document).ready(function () {
+  $('a.scrolly').each(function () {
+      const href = $(this).attr('href');
+      const current = window.location.origin + window.location.pathname;
+
+      // If the link is pointing to the home page with an anchor and we *are* on the home page
+      if (href.startsWith(window.location.origin) || href.startsWith(home_url + '/')) {
+        const hash = href.split('#')[1];
+      if (hash && (current === window.location.origin + '/' || current.endsWith('/index.php'))) {
+          $(this).attr('href', '#' + hash); // convert back to local anchor
+      }
+      }
+    });
+  });
+
 })(jQuery);

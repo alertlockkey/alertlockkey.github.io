@@ -4043,6 +4043,12 @@ iframe {
 					padding-top: 0 !important;
 				}
 
+				#menu ul > li:nth-child(3) {
+					border-top: 0 !important;
+					margin-top: 0 !important;
+					padding-top: 0 !important;
+				}
+
 				#menu ul > li > a {
 					border: 0;
 					color: inherit;

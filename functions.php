@@ -37,10 +37,44 @@ function alk_default_menu() {
   echo '
     <ul>
       <li><a href="' . home_url('/') . '">Home</a></li>
-      <li><a href="#three" class="scrolly">Services</a></li>
-      <li><a href="#contact" class="scrolly">Contact</a></li>
+      <li><a href="' . home_url('/') . '#three" class="scrolly">Services</a></li>
+      <li><a href="' . home_url('/') . '#contact" class="scrolly">Contact</a></li>
       <li><a href="' . home_url('/careers') . '">Careers</a></li>
-      <li><a href="#one" class="scrolly">About</a></li>
+      <li><a href="' . home_url('/') . '#one" class="scrolly">About</a></li>
     </ul>
   ';
 }
+
+// Handle Contact Form Submission
+function alk_handle_contact_form() {
+  // Sanitize form data
+  $name     = sanitize_text_field($_POST['demo-name'] ?? '');
+  $email    = sanitize_email($_POST['demo-email'] ?? '');
+  $category = sanitize_text_field($_POST['demo-category'] ?? '');
+  $priority = sanitize_text_field($_POST['demo-priority'] ?? '');
+  $message  = sanitize_textarea_field($_POST['demo-message'] ?? '');
+
+  // Compose email
+  $to      = 'tim@alertlock.net'; // <-- 👈 Change this to your email
+  $subject = 'New Contact Form Message from ' . $name;
+  $headers = ['Content-Type: text/html; charset=UTF-8', 'Reply-To: ' . $email];
+
+  $body = "
+    <h2>New Contact Form Submission</h2>
+    <p><strong>Name:</strong> {$name}</p>
+    <p><strong>Email:</strong> {$email}</p>
+    <p><strong>Category:</strong> {$category}</p>
+    <p><strong>Priority:</strong> {$priority}</p>
+    <p><strong>Message:</strong><br>{$message}</p>
+  ";
+
+  // Send email
+  wp_mail($to, $subject, $body, $headers);
+
+  // Redirect back with success
+  wp_redirect(home_url('/?form=success'));
+  exit;
+}
+add_action('admin_post_send_contact_form', 'alk_handle_contact_form');
+add_action('admin_post_nopriv_send_contact_form', 'alk_handle_contact_form');
+

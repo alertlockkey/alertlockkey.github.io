@@ -139,7 +139,14 @@
 
 			<section>
 				<h4>Use the form below to send us a message</h4><br>
-				<form method="post" action="./assets/php/send_form.php">
+				<?php if (isset($_GET['form']) && $_GET['form'] === 'success') : ?>
+					<div class="alert success" style="padding: 1rem; background: #c7f9cc; border: 1px solid #38a169; color: #22543d; margin-bottom: 1rem;">
+						✅ Your message has been sent successfully. We'll get back to you shortly!
+					</div>
+				<?php endif; ?>
+				
+				<form method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>">
+				<input type="hidden" name="action" value="send_contact_form">
 					<div class="row gtr-uniform">
 						<div class="col-6 col-12-xsmall">
 							<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
@@ -182,7 +189,6 @@
 						</div>
 						<div class="col-12">
 							<ul class="actions">
-								<!-- <li><input type="submit" value="Send Message" class="primary" /></li> -->
 								<li><input type="submit" value="Send Message" /></li>
 								<li><input type="reset" value="Reset" /></li>
 							</ul>
