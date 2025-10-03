@@ -17,6 +17,29 @@
 </div> <!-- /page-wrapper -->
 
 <!-- Scripts -->
+
+<script>
+jQuery(document).ready(function($) {
+  // Close menu when clicking outside it
+  $(document).on('click', function(e) {
+    if (!$(e.target).closest('#menu, .menuToggle').length) {
+      $('#menu').removeClass('visible');
+    }
+  });
+
+  // Toggle open/close on click
+  $('.menuToggle').on('click', function(e) {
+    e.preventDefault();
+    $('#menu').toggleClass('visible');
+  });
+
+  // Optional: Close when clicking a menu item
+  $('#menu a').on('click', function() {
+    $('#menu').removeClass('visible');
+  });
+});
+</script>
+
 <?php wp_footer(); ?>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
