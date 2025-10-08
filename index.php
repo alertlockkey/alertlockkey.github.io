@@ -6,17 +6,17 @@
     <div class="image"><img src="<?php echo get_template_directory_uri(); ?>/images/alk_logo_2016.png" height="66%" width= "66%" alt="" /></div><br>
     <h2><?php bloginfo('name'); ?></h2>
     <p>
-      <span>#1 DOOR & HARDWARE COMPANY IN SAN ANTONIO, TX</span>
-      <span>LOCALLY FAMILY OWNED AND OPERATED</span>
+      <span>#1 DOOR & HARDWARE COMPANY <br>IN CENTRAL AND SOUTH TEXAS</span>
+      <!-- <span>LOCALLY FAMILY OWNED AND OPERATED</span> -->
       <span>BONDED AND INSURED SINCE 1976</span>
       <span>AVAILABLE 24/7!</span>
       <span>(210) 342-6678</span>
     </p>
   </div>
   <ul class="actions special">
-    <li><a href="#contact" class="button primary">Contact Us</a></li>
+    <li><br><a href="#contact" class="button primary">Contact Us</a></li>
   </ul>
-  <a href="#one" class="more scrolly">Learn More</a>
+  <a href="#one" class="more scrolly"> </a>
 </section>
 
 <!-- About -->
@@ -25,13 +25,16 @@
 		<header class="major">
 			<h2>About Us<br />
 				</h2>
-				<!-- Always visible paragraph -->
 				<p>
-					Alert Lock & Key offers a full range of San Antonio locksmith services, from lockouts to rekeying doors. We work with families and businesses to ensure that your home or office is completely secure. The professionals on our team can help you protect your home from criminals or can help you get into your home if you’ve locked yourself out. We can help you rekey after buying a new home so you can be confident that only selected people have access. Our mobile locksmith services can get you back in your vehicle quickly. We can also help you upgrade your security technology with smart locks and alarm systems so that you know that you and your valuables are as safe as possible.
+					Alert Lock & Key offers a full range door and hardware services, from new installs to remodels, service work, or door and hardware supply. We work with suppliers, general contractors, and businesses to ensure that your needs are met professionally and on time. The hardworking men and women of this company are our foundation, with decades of experience you can rest assured that AL&K is the right fit for your needs. We look forward to working with every single one of our customers. Give us a call today, so we can serve you in the best way possible.
 				</p><br>
+				<!-- Always visible paragraph -->
+				<!-- <p>
+					Alert Lock & Key offers a full range of San Antonio locksmith services, from lockouts to rekeying doors. We work with families and businesses to ensure that your home or office is completely secure. The professionals on our team can help you protect your home from criminals or can help you get into your home if you’ve locked yourself out. We can help you rekey after buying a new home so you can be confident that only selected people have access. We can also help you upgrade your security technology with smart locks and alarm systems so that you know that you and your valuables are as safe as possible.
+				</p><br> -->
 
 				<!-- Collapsible content -->
-				<div class="more-content" id="more-content">
+				<!-- <div class="more-content" id="more-content">
 					<p>
 					Family owned and operated for more than 40 years, Alert Lock and Key has been committed to providing prompt and quality service. We offer 24 hour full locksmith services, residential and commercial locksmith services, access control, CCTV, construction, installation of doors and hardware, storefront glass installation, along with safe openings, moved, serviced and sold. Alert Lock and Key is fully licensed, bonded and insured, and we guarantee that when you work with us, you are in good hands.
 					</p><br>
@@ -43,10 +46,10 @@
 					<p>
 					Alert Lock & Key has been a reliable San Antonio company since 1976. For more than forty years, we’ve taken pride in providing excellent high quality locksmith services to the people and businesses of San Antonio. We provide free consultations on larger projects and quick turnarounds on immediate requests including lockouts and broken keys. You can always trust our locksmiths will perform a high-quality job and will keep your building as secure as possible.
 					</p><br>
-				</div>
+				</div> -->
 
 				<!-- Toggle button -->
-				<a class="toggle-btn" id="toggle-btn">Show More</a>
+				<!-- <a class="toggle-btn" id="toggle-btn">Show More</a> -->
 				<script>
 					document.addEventListener("DOMContentLoaded", function () {
 					const link = document.getElementById("toggle-btn");
@@ -75,6 +78,13 @@
 <!-- Services -->
 <section id="two" class="wrapper alt style2">
 	<section class="spotlight">
+		<div class="image"><img src="<?php echo get_template_directory_uri(); ?>/images/secured_panic.png" alt="" /></div><div class="content">
+			<h2>Doors & Hardware</h2>
+			<p>
+				Alert Lock & Key offers expert door and hardware installation in addition to supplying all your door and hardware needs. We provide durable door solutions and seamless installation to ensure optimal functionality and protection.</p>
+		</div>
+	</section>
+	<section class="spotlight">
 		<div class="image"><img src="<?php echo get_template_directory_uri(); ?>/images/locksmith.png" alt="" /></div><div class="content">
 			<h2>Locksmith Services</h2>
 			<p>Alert Lock & Key offers fast, reliable key replacement and key making services for homes and businesses, ensuring secure access and swift resolution for lost keys. We also provide advanced High Security Restricted Keys for enhanced protection against unauthorized duplication and entry.</p>
@@ -82,17 +92,11 @@
 	</section>
 	<section class="spotlight">
 		<div class="image"><img src="<?php echo get_template_directory_uri(); ?>/images/alk_alarms.jpg" alt="" /></div><div class="content">
-			<h2>Security</h2>
-			<p>Alert Lock & Key provides advanced smart lock and alarm systems in San Antonio, offering remote access control and enhanced security features to protect your home or business. Our solutions include easy key management, remote monitoring, and comprehensive safety measures to ensure peace of mind and efficient protection.</p>
+			<h2>Access Control</h2>
+			<p>Alert Lock & Key provides a full range of access control and enhanced security features to protect your business. Our solutions include remote monitoring and comprehensive safety measures to ensure peace of mind and efficient protection.</p>
 		</div>
 	</section>
-	<section class="spotlight">
-		<div class="image"><img src="<?php echo get_template_directory_uri(); ?>/images/secured_panic.png" alt="" /></div><div class="content">
-			<h2>Doors & Hardware</h2>
-			<p>
-				Alert Lock & Key offers expert door installation and hardware services, enhancing security, energy efficiency, and curb appeal for homes and businesses. We provide durable door solutions and seamless installation to ensure optimal functionality and protection.</p>
-		</div>
-	</section>
+
 </section>
 
 <!-- Features -->
@@ -103,31 +107,30 @@
 			<p>In addition to general maintenance work, we specialize in the following services.</p>
 		</header>
 		<ul class="features">
-			<li class="icon solid fa-home">
-				<h3>Residential</h3>
-				<p>Alert Lock & Key offers comprehensive residential locksmith services in San Antonio, including lockouts, rekeying, lock replacement, and key extraction, ensuring homeowners' security and peace of mind.</p>
-			</li>
 			<li class="icon solid fa-building">
-				<h3>Commercial</h3>
-				<p>Alert Lock & Key offers customized and durable commercial storefront glass solutions in San Antonio, providing a wide range of modern designs that enhance the aesthetics of businesses while ensuring security and functionality, with a seamless online purchasing process and excellent customer support.</p>
-			</li>
-			<li class="icon solid fa-car">
-				<h3>Automobile</h3>
-				<p>If you're locked out of your car in San Antonio, Alert Lock & Key offers fast, professional 24/7 auto locksmith services that prioritize safety and ensure no damage to your vehicle, whether you have traditional locks or modern fob technology.</p>
+				<h3>Doors & Hardware</h3>
+				<p>Alert Lock & Key offers complete commercial wood, hollow metal and commercial storefront glass solutions in Central and South Texas as well frames and all associated harware, ensuring security and functionality. No distance is too far!</p>
 			</li>
 			<li class="icon solid fa-lock">
 				<h3>Locksmith</h3>
-				<p>Alert Lock & Key offers fast and professional key replacement and rekeying services for homes and businesses in San Antonio, providing customized key systems, high-security restricted keys, and secure access control for all levels of users.</p>
+				<p>Alert Lock & Key offers fast and professional key replacement and rekeying services for homes and businesses in Central and South Texas, providing customized key systems, high-security restricted keys, and secure access control for all levels of users.</p>
 			</li>
 			<li class="icon solid fa-unlock">
 				<h3>Access Control</h3>
-				<p>Alert Lock & Key offers advanced access control systems in San Antonio, providing convenient, secure, and customizable smart locks for homes and businesses that allow remote control, digital key management, easy lock changes, and enhanced security against break-ins.</p>
+				<p>Alert Lock & Key offers advanced access control systems in Central and South Texas, providing convenient, secure, and customizable smart locks for businesses that allow remote control, digital key management, easy lock changes, and enhanced security.</p>
 			</li>
-			<li class="icon solid fa-bell">
-				<!-- NEED TO REMOVE THIS -->
+			<!-- <li class="icon solid fa-home">
+				<h3>Residential</h3>
+				<p>Alert Lock & Key offers comprehensive residential locksmith services in San Antonio, including lockouts, rekeying, lock replacement, and key extraction, ensuring homeowners' security and peace of mind.</p>
+			</li> -->
+			<!-- <li class="icon solid fa-car">
+				<h3>Automobile</h3>
+				<p>If you're locked out of your car in San Antonio, Alert Lock & Key offers fast, professional 24/7 auto locksmith services that prioritize safety and ensure no damage to your vehicle, whether you have traditional locks or modern fob technology.</p>
+			</li> -->
+			<!-- <li class="icon solid fa-bell">
 				<h3>Alarm Systems</h3> 
 				<p>Alert Lock & Key offers comprehensive San Antonio alarm systems that protect homes from intruders, fires, carbon monoxide, and other dangers, while also providing remote monitoring, potential insurance savings, and peace of mind through central monitoring and smartphone integration.</p>
-			</li>
+			</li> -->
 		</ul>
 	</div>
 </section>
@@ -145,56 +148,9 @@
 					</div>
 				<?php endif; ?>
 				
-				<form method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>">
-				<input type="hidden" name="action" value="send_contact_form">
-					<div class="row gtr-uniform">
-						<div class="col-6 col-12-xsmall">
-							<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-						</div>
-						<div class="col-6 col-12-xsmall">
-							<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-						</div>
-						<div class="col-12">
-							<select name="demo-category" id="demo-category">
-								<option value="">- Category -</option>
-								<option value="1">Get a Quote</option>
-								<option value="1">Work Orders</option>
-								<option value="1">Accounts Payable</option>
-								<option value="1">Accounts Receivable</option>
-								<option value="1">General</option>
-							</select>
-						</div>
-						<div class="col-4 col-12-small">
-							<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-							<label for="demo-priority-low">Low</label>
-						</div>
-						<div class="col-4 col-12-small">
-							<input type="radio" id="demo-priority-normal" name="demo-priority">
-							<label for="demo-priority-normal">Normal</label>
-						</div>
-						<div class="col-4 col-12-small">
-							<input type="radio" id="demo-priority-high" name="demo-priority">
-							<label for="demo-priority-high">High</label>
-						</div>
-						<div class="col-6 col-12-small">
-							<input type="checkbox" id="demo-copy" name="demo-copy">
-							<label for="demo-copy">Email me a copy</label>
-						</div>
-						<div class="col-6 col-12-small">
-							<input type="checkbox" id="demo-human" name="demo-human" checked>
-							<label for="demo-human">Not a robot</label>
-						</div>
-						<div class="col-12">
-							<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-						</div>
-						<div class="col-12">
-							<ul class="actions">
-								<li><input type="submit" value="Send Message" /></li>
-								<li><input type="reset" value="Reset" /></li>
-							</ul>
-						</div>
-					</div>
-				</form>
+				<?php// echo do_shortcode('[contact-form-7 id="8875450" title="new contact form"]'); ?>
+				<?php echo do_shortcode('[contact-form-7 id="b11aea0" title="new contact form"]'); ?>
+
 			</section>
 			<a href="mailto:workorders@alertlock.net" class="icon solid fa-envelope"> workorders@alertlock.net</a>
 			<p class="icon solid fa-phone"> 210-342-6678

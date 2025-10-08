@@ -2579,18 +2579,21 @@ input, select, textarea {
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
-		display: flex;
+		display: grid;
 		-moz-flex-wrap: wrap;
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
+		flex-direction: column;
+		align-items: center;
+		margin: 0 auto;
 		-moz-justify-content: center;
 		-webkit-justify-content: center;
 		-ms-justify-content: center;
 		justify-content: center;
 		list-style: none;
 		padding: 0;
-		width: 100%;
+		max-width: 50%;
 		box-shadow: rgba(0, 0, 0, 0.75) 3px 3px 6px 0px;
 	}
 
@@ -2598,8 +2601,8 @@ input, select, textarea {
 			padding: 4em 4em 2em 6em ;
 			display: block;
 			position: relative;
-			text-align: left;
-			width: 50%;
+			text-align: center;
+			width: 100%;
 			box-shadow: #ffffffb0 3px 3px 6px 0px inset,
 			#ffffffb0 -3px -3px 6px 1px inset;
 			border: 1px ridge #000000;
