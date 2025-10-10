@@ -1921,6 +1921,7 @@ input, select, textarea {
 	input[type="email"],
 	select {
 		height: 2.75em;
+		width: 75%;
 	}
 
 	textarea {
@@ -3259,6 +3260,7 @@ input, select, textarea {
 			.wrapper.style5 textarea {
 				background-color: #ffffff;
 				color: #000000;
+				margin: 1em;
 				box-shadow: rgb(0, 0, 0, 0.75) 2px 2px 4px 0px inset, 
 				rgba(0, 0, 0, 0.25) -2px -2px 4px 1px inset;
 			}
@@ -3349,6 +3351,7 @@ input, select, textarea {
 			.wrapper.style5 button,
 			.wrapper.style5 .button {
 				background-color:#cf2e2e;
+				margin: .5em;
 
 			}
 

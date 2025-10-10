@@ -91,7 +91,8 @@
 		</div>
 	</section>
 	<section class="spotlight">
-		<div class="image"><img src="<?php echo get_template_directory_uri(); ?>/images/alk_alarms.jpg" alt="" /></div><div class="content">
+		<!-- <div class="image"><img src="<?php echo get_template_directory_uri(); ?>/images/pdk-banner-product-img.png" alt="" /></div><div class="content"> -->
+		<div class="image"><img src="<?php echo get_template_directory_uri(); ?>/images/PDK-Red-Family-1600x1226.png" alt="" /></div><div class="content">
 			<h2>Access Control</h2>
 			<p>Alert Lock & Key provides a full range of access control and enhanced security features to protect your business. Our solutions include remote monitoring and comprehensive safety measures to ensure peace of mind and efficient protection.</p>
 		</div>

@@ -46,5 +46,18 @@ document.addEventListener("DOMContentLoaded", function () {
   document.body.classList.remove("is-preload");
 });
 </script>
+<script>
+document.addEventListener('wpcf7submit', function(event) {
+  // Re-show radios & checkboxes after CF7 refresh
+  const inputs = document.querySelectorAll(
+    '.wpcf7 input[type="radio"], .wpcf7 input[type="checkbox"]'
+  );
+  inputs.forEach(el => {
+    el.style.display = 'inline-block';
+    el.style.opacity = '1';
+    el.style.visibility = 'visible';
+  });
+}, false);
+</script>
 </body>
 </html>
