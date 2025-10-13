@@ -3918,7 +3918,7 @@ iframe {
 	#menu ul {
 		list-style: none;
 		padding: 0;
-		margin: 0;
+		margin: 0 0 2em 0;
 	}
 
 	#menu ul li {
@@ -4168,8 +4168,9 @@ iframe {
 			height: inherit;
 			line-height: inherit;
 			position: absolute;
-			right: 0;
 			top: 0;
+			right: 4.5em;
+			z-index: 999;
 		}
 
 			#header nav > ul {
