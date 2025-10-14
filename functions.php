@@ -9,7 +9,7 @@ function alertlock_enqueue_assets() {
   wp_enqueue_script('jquery');
   wp_enqueue_script('swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', [], null, true);
   wp_enqueue_script('three', 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js', [], null, true);
-  wp_enqueue_script('main-js', get_template_directory_uri() . '/assets/js/main.js', ['jquery', 'browser', 'breakpoints', 'util', 'scrolly', 'scrollex'], null, true);
+  wp_localize_script('main-js', 'alkData', ['homeUrl' => home_url('/')]);
   wp_enqueue_script('alk-fixes', get_template_directory_uri() . '/assets/js/alk-fixes.js', ['jquery'], time(), true);
   wp_enqueue_script('browser', get_template_directory_uri() . '/assets/js/browser.min.js', [], null, true);
   wp_enqueue_script('breakpoints', get_template_directory_uri() . '/assets/js/breakpoints.min.js', ['browser'], null, true);
@@ -18,6 +18,7 @@ function alertlock_enqueue_assets() {
   // ✅ Add these two plugins:
   wp_enqueue_script('scrolly', get_template_directory_uri() . '/assets/js/jquery.scrolly.min.js', ['jquery'], null, true);
   wp_enqueue_script('scrollex', get_template_directory_uri() . '/assets/js/jquery.scrollex.min.js', ['jquery'], null, true);
+  wp_enqueue_script('main-js', get_template_directory_uri() . '/assets/js/main.js', ['jquery', 'browser', 'breakpoints', 'util', 'scrolly', 'scrollex'], null, true);
 
   // ✅ main.js must now wait for all of the above
 
@@ -55,7 +56,7 @@ function alk_handle_contact_form() {
   $message  = sanitize_textarea_field($_POST['demo-message'] ?? '');
 
   // Compose email
-  $to      = 'tim@alertlock.net'; // <-- 👈 Change this to your email
+  $to      = 'timgarza@gmail.com'; // <-- 👈 Change this to your email
   $subject = 'New Contact Form Message from ' . $name;
   $headers = ['Content-Type: text/html; charset=UTF-8', 'Reply-To: ' . $email];
 
@@ -78,3 +79,54 @@ function alk_handle_contact_form() {
 add_action('admin_post_send_contact_form', 'alk_handle_contact_form');
 add_action('admin_post_nopriv_send_contact_form', 'alk_handle_contact_form');
 
+
+
+// ========== Careers form handler ==========
+add_action('admin_post_nopriv_alk_careers_submit', 'alk_handle_careers_form');
+add_action('admin_post_alk_careers_submit', 'alk_handle_careers_form');
+
+function alk_handle_careers_form() {
+    if ( ! isset($_POST['alk_careers_nonce_field']) || 
+         ! wp_verify_nonce($_POST['alk_careers_nonce_field'], 'alk_careers_nonce') ) {
+        wp_die('Security check failed.');
+    }
+
+    // ✅ Load Dompdf
+    require_once WP_CONTENT_DIR . '/uploads/dompdf/autoload.inc.php';
+
+    // ✅ Reference classes directly with full namespace
+    $options = new Dompdf\Options();
+    $options->set('isRemoteEnabled', true);
+
+    $dompdf = new Dompdf\Dompdf($options);
+
+    // ✅ Build the HTML
+    $html = '<h2>Job Application</h2>';
+    foreach ($_POST as $key => $value) {
+        if (in_array($key, ['action','alk_careers_nonce_field','_wp_http_referer'])) continue;
+        $clean_key = ucwords(str_replace('-', ' ', $key));
+        $html .= "<p><strong>{$clean_key}:</strong> " . esc_html(is_array($value) ? implode(', ', $value) : $value) . "</p>";
+    }
+
+    // ✅ Render PDF
+    $dompdf->loadHtml($html);
+    $dompdf->setPaper('A4', 'portrait');
+    $dompdf->render();
+
+    // ✅ Save PDF temporarily
+    $upload_dir = wp_upload_dir();
+    $pdf_path = $upload_dir['path'] . '/application-' . time() . '.pdf';
+    file_put_contents($pdf_path, $dompdf->output());
+
+    // ✅ Email PDF
+    $to = 'timgarza@gmail.com';
+    $subject = 'New Job Application';
+    $body = 'A new job application has been submitted. PDF attached.';
+    $headers = ['Content-Type: text/html; charset=UTF-8'];
+
+    wp_mail($to, $subject, $body, $headers, [$pdf_path]);
+
+    // ✅ Redirect after submit
+    wp_redirect(home_url('/careers?form=success'));
+    exit;
+}

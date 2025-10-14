@@ -150,7 +150,7 @@
 				<?php endif; ?>
 				
 				<?php// echo do_shortcode('[contact-form-7 id="8875450" title="new contact form"]'); ?>
-				<?php echo do_shortcode('[contact-form-7 id="b11aea0" title="new contact form"]'); ?>
+				<?php echo do_shortcode('[contact-form-7 id="87" title="new contact form"]'); ?>
 
 			</section>
 			<a href="mailto:workorders@alertlock.net" class="icon solid fa-envelope"> workorders@alertlock.net</a>

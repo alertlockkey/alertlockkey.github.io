@@ -39,12 +39,12 @@
 
 <div id="page-wrapper">
   <!-- Header -->
-  <header id="header" class="alt">
+  <header id="header" class="<?php echo is_front_page() ? 'alt' : ''; ?>">
     <h1><a href="<?php echo home_url(); ?>">Alert Lock & Key</a></h1>
 	<nav id="nav">
 		<ul>
 			<li class="special">
-				<a href="#menu" class="menuToggle" aria-label="Toggle menu"><span>Menu</span></a>
+				<a href="#menu" class="menuToggle" aria-label="Toggle menu"><span>Menu</span>
 					<span class="bar"></span>
 					<span class="bar"></span>
 					<span class="bar"></span>
