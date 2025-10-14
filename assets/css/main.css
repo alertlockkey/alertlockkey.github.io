@@ -3934,6 +3934,10 @@ iframe {
 					color: #cf2e2e;
 				}
 
+				#menu ul > li > a:hover {
+					box-shadow: inset 0 0 0 1px #000;
+				}
+
 				#menu ul > li > a:active {
 					background-color: #222;
 					color: #cf2e2e;
